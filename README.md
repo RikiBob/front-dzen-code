@@ -1,29 +1,58 @@
-# front-dzen-code
+# 📝 Comment SPA Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a **Single Page Application** for posting, viewing, and replying to comments with file attachments and CAPTCHA validation.
 
-## Recommended IDE Setup
+## 🚀 Features
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+✅ User registration and authentication  
+✅ Post comments with:
+- User Name (alphanumeric, required)
+- Email (valid email format, required)
+- Home page (valid URL, optional)
+- CAPTCHA validation
+- Text content with allowed HTML tags (`<a>`, `<code>`, `<i>`, `<strong>`)
 
-## Customize configuration
+✅ Attach files:
+- Images (JPG, PNG, GIF) up to **320x240px**
+- Text files (TXT) up to **100KB**
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+✅ View comments in a sortable table by **User Name**, **Email**, or **Created At** (ASC/DESC)  
+✅ Pagination with **25 comments per page**  
+✅ Nested replies (cascade display)  
+✅ XSS protection for text content  
+✅ Global error handling  
+✅ Simple and clean CSS design
 
-## Project Setup
+---
 
-```sh
+## 🛠 Tech Stack
+
+- **Vue 3 + Vite**
+- **vee-validate** for form validation
+- **Fetch** for API requests
+- **WebSocket** for real-time updates
+- CSS modules for styling
+
+---
+
+## ⚙️ Setup
+
+1. **Clone the repository:**
+
+```bash
+git clone https://github.com/RikiBob/front-dzen-code.git
+cd front-dzen-code
 npm install
 ```
 
-### Compile and Hot-Reload for Development
+## Create a .env file and add:
 
-```sh
-npm run dev
+```env
+VITE_SERVER_URL=http://localhost:4000
 ```
 
-### Compile and Minify for Production
+## Run the development server
 
-```sh
-npm run build
+```bash
+npm run dev
 ```
