@@ -8,6 +8,7 @@ import RegisterForm from "@/components/user/RegisterForm.vue";
 import EditProfileForm from "@/components/user/EditProfileForm.vue";
 import UserProfile from "@/components/user/UserProfile.vue";
 import MainPage from "@/components/MainPage.vue";
+import HomePage from "@/components/HomePage.vue";
 
 export const router = createRouter({
     history: createWebHistory(),
@@ -35,6 +36,11 @@ export const router = createRouter({
             name: 'MainPage',
             path: '/main',
             component: MainPage
+        },
+        {
+            name: 'HomePage',
+            path: '/',
+            component: HomePage
         }],
 });
 
